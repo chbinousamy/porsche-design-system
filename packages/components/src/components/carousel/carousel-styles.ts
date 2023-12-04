@@ -26,6 +26,7 @@ import {
   gridExtendedOffset,
   gridGap,
   headingXLargeStyle,
+  motionDurationModerate,
   spacingFluidMedium,
   spacingFluidXSmall,
   spacingStaticMedium,
@@ -34,7 +35,7 @@ import {
   textSmallStyle,
 } from '@porsche-design-system/utilities-v2';
 
-export const carouselTransitionDuration = 400;
+export const carouselTransitionDuration = motionDurationModerate;
 export const bulletActiveClass = 'bullet--active';
 export const paginationInfiniteStartCaseClass = 'pagination--infinite';
 export const bulletInfiniteClass = 'bullet--infinite';
@@ -76,46 +77,50 @@ export const getComponentCss = (
 
   return getCss({
     '@global': {
-      ':host': addImportantToEachRule({
+      ':host': {
         display: 'flex',
-        gap: spacingFluidMedium,
-        flexDirection: 'column',
-        boxSizing: 'content-box', // ensures padding is added to host instead of subtracted
-        ...colorSchemeStyles,
-        ...hostHiddenStyles,
-      }),
-      '::slotted(*)': {
-        borderRadius: addImportantToRule(`var(--p-carousel-border-radius, ${borderRadiusLarge})`),
+        ...addImportantToEachRule({
+          gap: spacingFluidMedium,
+          flexDirection: 'column',
+          boxSizing: 'content-box', // ensures padding is added to host instead of subtracted
+          ...colorSchemeStyles,
+          ...hostHiddenStyles,
+        }),
       },
-      '::slotted(*:focus-visible)': addImportantToEachRule({
-        outline: `${borderWidthBase} solid ${focusColor}`,
-        ...prefersColorSchemeDarkMediaQuery(theme, {
-          outlineColor: focusColorDark,
-        }),
-        outlineOffset: '2px',
-      }),
-      [selectorHeading]: addImportantToEachRule({
-        ...headingXLargeStyle,
-        maxWidth: '56.25rem',
-        margin: 0,
-      }),
-      [selectorDescription]: addImportantToEachRule({
-        ...textSmallStyle,
-        maxWidth: '34.375rem',
-        margin: `${spacingFluidXSmall} 0 0`,
-      }),
-      [`${selectorHeading},${selectorDescription}`]: addImportantToEachRule({
-        color: primaryColor,
-        ...prefersColorSchemeDarkMediaQuery(theme, {
-          color: primaryColorDark,
-        }),
-        [mediaQueryS]: isHeaderAlignCenter
-          ? {
-              gridColumn: 2,
-            }
-          : {
-              gridColumn: '1 / 3',
-            },
+      ...addImportantToEachRule({
+        '::slotted(*)': {
+          borderRadius: `var(--p-carousel-border-radius, ${borderRadiusLarge})`,
+        },
+        '::slotted(*:focus-visible)': {
+          outline: `${borderWidthBase} solid ${focusColor}`,
+          ...prefersColorSchemeDarkMediaQuery(theme, {
+            outlineColor: focusColorDark,
+          }),
+          outlineOffset: '2px',
+        },
+        [selectorHeading]: {
+          ...headingXLargeStyle,
+          maxWidth: '56.25rem',
+          margin: 0,
+        },
+        [selectorDescription]: {
+          ...textSmallStyle,
+          maxWidth: '34.375rem',
+          margin: `${spacingFluidXSmall} 0 0`,
+        },
+        [`${selectorHeading},${selectorDescription}`]: {
+          color: primaryColor,
+          ...prefersColorSchemeDarkMediaQuery(theme, {
+            color: primaryColorDark,
+          }),
+          [mediaQueryS]: isHeaderAlignCenter
+            ? {
+                gridColumn: 2,
+              }
+            : {
+                gridColumn: '1 / 3',
+              },
+        },
       }),
     },
     header: {
@@ -213,7 +218,7 @@ export const getComponentCss = (
         width: 'fit-content',
         height: paginationBulletSize, // Needed to avoid jumping when rewinding dynamically added slides
         gap: spacingStaticSmall,
-        transition: `transform ${carouselTransitionDuration}ms`,
+        transition: `transform ${carouselTransitionDuration}`,
       },
       bullet: {
         borderRadius: borderRadiusSmall,
@@ -231,12 +236,12 @@ export const getComponentCss = (
           ? {
               width: '0px',
               height: '0px',
-              transition: `background-color ${carouselTransitionDuration}ms, width ${carouselTransitionDuration}ms, height ${carouselTransitionDuration}ms`,
+              transition: `background-color ${carouselTransitionDuration}, width ${carouselTransitionDuration}, height ${carouselTransitionDuration}`,
             }
           : {
               width: paginationBulletSize,
               height: paginationBulletSize,
-              transition: `background-color ${carouselTransitionDuration}ms, width ${carouselTransitionDuration}ms`,
+              transition: `background-color ${carouselTransitionDuration}, width ${carouselTransitionDuration}`,
             }),
       },
       ...(isInfinitePagination && {

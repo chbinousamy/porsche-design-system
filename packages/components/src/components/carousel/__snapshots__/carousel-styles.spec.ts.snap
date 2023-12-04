@@ -2,7 +2,7 @@
 
 exports[`getComponentCss() should return correct css for width: basic, hasPagination: false, isInfinitePagination: false, alignHeader: center and theme: light 1`] = `
 ":host {
-  display: flex !important;
+  display: flex;
   gap: clamp(16px, 1.25vw + 12px, 36px) !important;
   flex-direction: column !important;
   box-sizing: content-box !important;
@@ -134,7 +134,7 @@ h2,::slotted([slot=heading]),p,::slotted([slot=description]) {
 
 exports[`getComponentCss() should return correct css for width: basic, hasPagination: false, isInfinitePagination: true, alignHeader: left and theme: light 1`] = `
 ":host {
-  display: flex !important;
+  display: flex;
   gap: clamp(16px, 1.25vw + 12px, 36px) !important;
   flex-direction: column !important;
   box-sizing: content-box !important;
@@ -264,7 +264,7 @@ h2,::slotted([slot=heading]),p,::slotted([slot=description]) {
 
 exports[`getComponentCss() should return correct css for width: basic, hasPagination: false, isInfinitePagination: true, alignHeader: start and theme: light 1`] = `
 ":host {
-  display: flex !important;
+  display: flex;
   gap: clamp(16px, 1.25vw + 12px, 36px) !important;
   flex-direction: column !important;
   box-sizing: content-box !important;
@@ -394,7 +394,7 @@ h2,::slotted([slot=heading]),p,::slotted([slot=description]) {
 
 exports[`getComponentCss() should return correct css for width: basic, hasPagination: true, isInfinitePagination: false, alignHeader: center and theme: dark 1`] = `
 ":host {
-  display: flex !important;
+  display: flex;
   gap: clamp(16px, 1.25vw + 12px, 36px) !important;
   flex-direction: column !important;
   box-sizing: content-box !important;
@@ -499,14 +499,14 @@ h2,::slotted([slot=heading]),p,::slotted([slot=description]) {
   width: fit-content;
   height: 8px;
   gap: 8px;
-  transition: transform 400ms;
+  transition: transform 0.4s;
 }
 .bullet {
   border-radius: 4px;
   background: #88898C;
   width: 8px;
   height: 8px;
-  transition: background-color 400ms, width 400ms;
+  transition: background-color 0.4s, width 0.4s;
 }
 .bullet--active {
   background: #FBFCFF;
@@ -554,7 +554,7 @@ h2,::slotted([slot=heading]),p,::slotted([slot=description]) {
 
 exports[`getComponentCss() should return correct css for width: basic, hasPagination: true, isInfinitePagination: false, alignHeader: start and theme: light 1`] = `
 ":host {
-  display: flex !important;
+  display: flex;
   gap: clamp(16px, 1.25vw + 12px, 36px) !important;
   flex-direction: column !important;
   box-sizing: content-box !important;
@@ -658,14 +658,14 @@ h2,::slotted([slot=heading]),p,::slotted([slot=description]) {
   width: fit-content;
   height: 8px;
   gap: 8px;
-  transition: transform 400ms;
+  transition: transform 0.4s;
 }
 .bullet {
   border-radius: 4px;
   background: #6B6D70;
   width: 8px;
   height: 8px;
-  transition: background-color 400ms, width 400ms;
+  transition: background-color 0.4s, width 0.4s;
 }
 .bullet--active {
   background: #010205;
@@ -712,7 +712,7 @@ h2,::slotted([slot=heading]),p,::slotted([slot=description]) {
 
 exports[`getComponentCss() should return correct css for width: basic, hasPagination: true, isInfinitePagination: true, alignHeader: center and theme: light 1`] = `
 ":host {
-  display: flex !important;
+  display: flex;
   gap: clamp(16px, 1.25vw + 12px, 36px) !important;
   flex-direction: column !important;
   box-sizing: content-box !important;
@@ -817,14 +817,14 @@ h2,::slotted([slot=heading]),p,::slotted([slot=description]) {
   width: fit-content;
   height: 8px;
   gap: 8px;
-  transition: transform 400ms;
+  transition: transform 0.4s;
 }
 .bullet {
   border-radius: 4px;
   background: #6B6D70;
   width: 0px;
   height: 0px;
-  transition: background-color 400ms, width 400ms, height 400ms;
+  transition: background-color 0.4s, width 0.4s, height 0.4s;
 }
 .pagination--infinite > .bullet:nth-child(-n+4) {
   width: 8px;
@@ -896,7 +896,7 @@ h2,::slotted([slot=heading]),p,::slotted([slot=description]) {
 
 exports[`getComponentCss() should return correct css for width: basic, hasPagination: true, isInfinitePagination: true, alignHeader: start and theme: dark 1`] = `
 ":host {
-  display: flex !important;
+  display: flex;
   gap: clamp(16px, 1.25vw + 12px, 36px) !important;
   flex-direction: column !important;
   box-sizing: content-box !important;
@@ -1000,14 +1000,14 @@ h2,::slotted([slot=heading]),p,::slotted([slot=description]) {
   width: fit-content;
   height: 8px;
   gap: 8px;
-  transition: transform 400ms;
+  transition: transform 0.4s;
 }
 .bullet {
   border-radius: 4px;
   background: #88898C;
   width: 0px;
   height: 0px;
-  transition: background-color 400ms, width 400ms, height 400ms;
+  transition: background-color 0.4s, width 0.4s, height 0.4s;
 }
 .pagination--infinite > .bullet:nth-child(-n+4) {
   width: 8px;
@@ -1078,7 +1078,7 @@ h2,::slotted([slot=heading]),p,::slotted([slot=description]) {
 
 exports[`getComponentCss() should return correct css for width: extended, hasPagination: {"base":false,"xs":true,"s":false,"m":true,"l":false,"xl":true}, isInfinitePagination: false, alignHeader: start and theme: light 1`] = `
 ":host {
-  display: flex !important;
+  display: flex;
   gap: clamp(16px, 1.25vw + 12px, 36px) !important;
   flex-direction: column !important;
   box-sizing: content-box !important;
@@ -1182,14 +1182,14 @@ h2,::slotted([slot=heading]),p,::slotted([slot=description]) {
   width: fit-content;
   height: 8px;
   gap: 8px;
-  transition: transform 400ms;
+  transition: transform 0.4s;
 }
 .bullet {
   border-radius: 4px;
   background: #6B6D70;
   width: 8px;
   height: 8px;
-  transition: background-color 400ms, width 400ms;
+  transition: background-color 0.4s, width 0.4s;
 }
 .bullet--active {
   background: #010205;
@@ -1263,7 +1263,7 @@ h2,::slotted([slot=heading]),p,::slotted([slot=description]) {
 
 exports[`getComponentCss() should return correct css for width: extended, hasPagination: {"base":false,"xs":true,"s":false,"m":true,"l":false,"xl":true}, isInfinitePagination: true, alignHeader: center and theme: light 1`] = `
 ":host {
-  display: flex !important;
+  display: flex;
   gap: clamp(16px, 1.25vw + 12px, 36px) !important;
   flex-direction: column !important;
   box-sizing: content-box !important;
@@ -1368,14 +1368,14 @@ h2,::slotted([slot=heading]),p,::slotted([slot=description]) {
   width: fit-content;
   height: 8px;
   gap: 8px;
-  transition: transform 400ms;
+  transition: transform 0.4s;
 }
 .bullet {
   border-radius: 4px;
   background: #6B6D70;
   width: 0px;
   height: 0px;
-  transition: background-color 400ms, width 400ms, height 400ms;
+  transition: background-color 0.4s, width 0.4s, height 0.4s;
 }
 .pagination--infinite > .bullet:nth-child(-n+4) {
   width: 8px;
@@ -1474,7 +1474,7 @@ h2,::slotted([slot=heading]),p,::slotted([slot=description]) {
 
 exports[`getComponentCss() should return correct css for width: extended, hasPagination: false, isInfinitePagination: false, alignHeader: center and theme: light 1`] = `
 ":host {
-  display: flex !important;
+  display: flex;
   gap: clamp(16px, 1.25vw + 12px, 36px) !important;
   flex-direction: column !important;
   box-sizing: content-box !important;
@@ -1606,7 +1606,7 @@ h2,::slotted([slot=heading]),p,::slotted([slot=description]) {
 
 exports[`getComponentCss() should return correct css for width: extended, hasPagination: false, isInfinitePagination: true, alignHeader: start and theme: light 1`] = `
 ":host {
-  display: flex !important;
+  display: flex;
   gap: clamp(16px, 1.25vw + 12px, 36px) !important;
   flex-direction: column !important;
   box-sizing: content-box !important;
@@ -1736,7 +1736,7 @@ h2,::slotted([slot=heading]),p,::slotted([slot=description]) {
 
 exports[`getComponentCss() should return correct css for width: extended, hasPagination: true, isInfinitePagination: false, alignHeader: start and theme: light 1`] = `
 ":host {
-  display: flex !important;
+  display: flex;
   gap: clamp(16px, 1.25vw + 12px, 36px) !important;
   flex-direction: column !important;
   box-sizing: content-box !important;
@@ -1840,14 +1840,14 @@ h2,::slotted([slot=heading]),p,::slotted([slot=description]) {
   width: fit-content;
   height: 8px;
   gap: 8px;
-  transition: transform 400ms;
+  transition: transform 0.4s;
 }
 .bullet {
   border-radius: 4px;
   background: #6B6D70;
   width: 8px;
   height: 8px;
-  transition: background-color 400ms, width 400ms;
+  transition: background-color 0.4s, width 0.4s;
 }
 .bullet--active {
   background: #010205;
@@ -1894,7 +1894,7 @@ h2,::slotted([slot=heading]),p,::slotted([slot=description]) {
 
 exports[`getComponentCss() should return correct css for width: extended, hasPagination: true, isInfinitePagination: true, alignHeader: center and theme: light 1`] = `
 ":host {
-  display: flex !important;
+  display: flex;
   gap: clamp(16px, 1.25vw + 12px, 36px) !important;
   flex-direction: column !important;
   box-sizing: content-box !important;
@@ -1999,14 +1999,14 @@ h2,::slotted([slot=heading]),p,::slotted([slot=description]) {
   width: fit-content;
   height: 8px;
   gap: 8px;
-  transition: transform 400ms;
+  transition: transform 0.4s;
 }
 .bullet {
   border-radius: 4px;
   background: #6B6D70;
   width: 0px;
   height: 0px;
-  transition: background-color 400ms, width 400ms, height 400ms;
+  transition: background-color 0.4s, width 0.4s, height 0.4s;
 }
 .pagination--infinite > .bullet:nth-child(-n+4) {
   width: 8px;

@@ -16,15 +16,46 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 #### Added
 
+- Prop `submit-button` to show/hide a submit button for `Text Field Wrapper` `type="search"` if wrapped inside a form
+  ([#2908](https://github.com/porsche-design-system/porsche-design-system/pull/2908))
+
+#### Changed
+
+- Hide `border-bottom` of `Accordion` if used as single item
+  ([#2911](https://github.com/porsche-design-system/porsche-design-system/pull/2911))
+- `display` css property can be overridden on all components, e.g. within media queries  
+  ([#2913](https://github.com/porsche-design-system/porsche-design-system/pull/2913))
+
+### [3.9.0] - 2023-11-24
+
+### [3.9.0-rc.0] - 2023-11-23
+
+#### Added
+
+- Angular: `theme: 'light' | 'dark' | 'auto'` option to `PorscheDesignSystemModule.load()` to set `theme` on all child
+  components  
+  ([#2872](https://github.com/porsche-design-system/porsche-design-system/pull/2872))
+- React: `theme: 'light' | 'dark' | 'auto'` prop to `PorscheDesignSystemProvider` to set `theme` on all child
+  components  
+  ([#2872](https://github.com/porsche-design-system/porsche-design-system/pull/2872))
+- Vue: `theme: 'light' | 'dark' | 'auto'` prop to `PorscheDesignSystemProvider` to set `theme` on all child components  
+  ([#2872](https://github.com/porsche-design-system/porsche-design-system/pull/2872))
 - Validation for usage of different PDS versions
   ([#2867](https://github.com/porsche-design-system/porsche-design-system/pull/2867))
 
 #### Changed
 
+- `Text Field Wrapper`, `Textarea Wrapper`, `Select Wrapper`, `Multi Select`, `Pin Code`, `Checkbox Wrapper` and
+  `Radio Button Wrapper` have improved visual alignment
+  ([#2854](https://github.com/porsche-design-system/porsche-design-system/pull/2854))
+- `Text Field Wrapper` fully supports RTL (right-to-left) mode
+  ([#2854](https://github.com/porsche-design-system/porsche-design-system/pull/2854))
 - `Pin Code`: Prop values from `1` to `6` are now supported for `length` prop
   ([#2859](https://github.com/porsche-design-system/porsche-design-system/pull/2859))
 - `Model Signature` asset for `model="macan"`
   ([#2857](https://github.com/porsche-design-system/porsche-design-system/pull/2857))
+- Use motion tokens in all components
+  ([#2834](https://github.com/porsche-design-system/porsche-design-system/pull/2834))
 
 #### Fixed
 
@@ -34,6 +65,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
   ([#2858](https://github.com/porsche-design-system/porsche-design-system/pull/2858))
 - `Checkbox Wrapper` and `Radio Button Wrapper` border-color/background-color does not reset on hover
   ([#2852](https://github.com/porsche-design-system/porsche-design-system/pull/2852))
+- `Tabs Bar` losing `activeTabIndex` and underline in certain framework scenarios
+  ([#2896](https://github.com/porsche-design-system/porsche-design-system/pull/2896))
+- `Modal` and `Flyout` body jumping in the background and scrolling back to the top in Next Js and Remix
+  ([#2890](https://github.com/porsche-design-system/porsche-design-system/pull/2890))
 
 ### [3.8.0] - 2023-10-24
 
