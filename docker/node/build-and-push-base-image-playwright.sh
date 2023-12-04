@@ -1,6 +1,6 @@
 #!/bin/bash
 
-REGISTRY=ghcr.io/porsche-design-system/porsche-design-system
+REGISTRY=ghcr.io/chbinousamy/porsche-design-system
 IMAGE=playwright
 TAG=v1.39.0-focal-test2
 
